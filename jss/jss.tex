@@ -1,0 +1,75 @@
+\documentclass[
+]{jss}
+
+%% recommended packages
+\usepackage{orcidlink,thumbpdf,lmodern}
+
+\usepackage[utf8]{inputenc}
+
+\author{
+FirstName LastName~\orcidlink{0000-0000-0000-0000}\\University/Company
+}
+\title{A Capitalized Title: Something about a Package \pkg{foo}}
+
+\Plainauthor{FirstName LastName}
+\Plaintitle{A Capitalized Title: Something about a Package foo}
+\Shorttitle{\pkg{foo}: A Capitalized Title}
+
+
+\Abstract{
+The abstract of the article.
+}
+
+\Keywords{keywords, not capitalized, \proglang{Java}}
+\Plainkeywords{keywords, not capitalized, Java}
+
+%% publication information
+%% \Volume{50}
+%% \Issue{9}
+%% \Month{June}
+%% \Year{2012}
+%% \Submitdate{}
+%% \Acceptdate{2012-06-04}
+
+\Address{
+    FirstName LastName\\
+    University/Company\\
+    First line\\
+Second line\\
+  E-mail: \email{name@company.com}\\
+  URL: \url{http://rstudio.com}\\~\\
+  }
+
+
+% tightlist command for lists without linebreak
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+
+\usepackage{amsmath}
+
+\begin{document}
+
+
+
+In the \texttt{rticles::jss\_article} template, a reference prints out
+all the author names when it is used for the first time. For example,
+Let's reference tidyverse:
+
+tidyverse \citep{tidyverse}
+
+But the exact same reference works perfectly after the first time:
+
+tidyverse \citep{tidyverse}
+
+tidyverse \citep{tidyverse}
+
+tidyverse \citep{tidyverse}
+
+\bibliography{bib.bib}
+
+
+
+\end{document}

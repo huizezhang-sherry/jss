@@ -1,0 +1,47 @@
+---
+documentclass: jss
+author:
+  - name: FirstName LastName
+    orcid: 0000-0000-0000-0000
+    affiliation: University/Company
+    # use this syntax to add text on several lines
+    address: |
+      | First line
+      | Second line
+    email: \email{name@company.com}
+    url: http://rstudio.com
+title:
+  formatted: "A Capitalized Title: Something about a Package \\pkg{foo}"
+  # If you use tex in the formatted title, also supply version without
+  plain:     "A Capitalized Title: Something about a Package foo"
+  # For running headers, if needed
+  short:     "\\pkg{foo}: A Capitalized Title"
+abstract: >
+  The abstract of the article.
+keywords:
+  # at least one keyword must be supplied
+  formatted: [keywords, not capitalized, "\\proglang{Java}"]
+  plain:     [keywords, not capitalized, Java]
+preamble: >
+  \usepackage{amsmath}
+output: rticles::jss_article
+bibliography: bib.bib
+---
+
+```{r, setup, include=FALSE}
+options(prompt = 'R> ', continue = '+ ')
+```
+
+In the `rticles::jss_article` template, a reference prints out all the author names when it is used for the first time. For example, Let's reference tidyverse: 
+
+tidyverse [@tidyverse]
+
+But the exact same reference works perfectly after the first time:
+
+tidyverse [@tidyverse] 
+
+tidyverse [@tidyverse]
+
+tidyverse [@tidyverse]
+
+
